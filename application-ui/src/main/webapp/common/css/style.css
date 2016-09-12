@@ -1,0 +1,1021 @@
+/*
+	Portions of this CSS file are based on Terrain (terrain.io), 
+	which was released under the following license terms:
+	
+	Copyright (c) 2013 Rowan Hogan, Brad Parker, et al.
+	
+	MIT License
+
+	Permission is hereby granted, free of charge, to any person obtaining
+	a copy of this software and associated documentation files (the
+	"Software"), to deal in the Software without restriction, including
+	without limitation the rights to use, copy, modify, merge, publish,
+	distribute, sublicense, and/or sell copies of the Software, and to
+	permit persons to whom the Software is furnished to do so, subject to
+	the following conditions:
+	
+	The above copyright notice and this permission notice shall be
+	included in all copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+	EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+	NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+	LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+	OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+	WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, del, em, img, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, section {
+	margin : 0;
+	padding : 0;
+	border : 0;
+	font : inherit;
+	font-size : 100%;
+	vertical-align : baseline
+}
+
+html {
+	line-height : 1;
+	font-size : 100%;
+	font-family : 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+	line-height : 1.7em;
+	background-color : white;
+	color : #111
+}
+
+ol, ul {
+	list-style : none;
+}
+
+table {
+	border-collapse : collapse;
+	border-spacing : 0
+}
+
+caption, th, td {
+	text-align : left;
+	font-weight : normal;
+	vertical-align : middle
+}
+
+a img {
+	border : none
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display : block
+}
+
+p {
+	margin-bottom : 1.7em
+}
+
+em, cite, i {
+	font-style : italic
+}
+
+b, strong {
+	font-weight : 700
+}
+
+u {
+	text-decoration : underline
+}
+
+pre, code, var, samp, kbd {
+	font-family : 'Menlo', 'Monaco', 'Courier New', monospace
+}
+
+sub {
+	font-size : 0.8em;
+	position : relative;
+	bottom : -0.28333em
+}
+
+sup {
+	font-size : 0.8em;
+	position : relative;
+	top : -0.425em
+}
+
+hr {
+	height : 0;
+	border : none;
+	background : none;
+	margin-top : 1.65em;
+	margin-bottom : 1.65em;
+	border-top : 0.1em solid #d6d6d6
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family : 'Source Sans Pro', 'Helvetica Neue', sans-serif
+}
+
+h1 {
+	font-size : 3em;
+	font-weight : 300;
+	margin-top : 2.2678em;
+	margin-bottom : 1.1339em;
+	line-height : 1.1339em
+}
+
+h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6 {
+	margin-top : 0
+}
+
+ul, ol {
+	padding : 0;
+	margin-top : 0
+}
+
+ol {
+	list-style : decimal;
+	counter-reset : item
+}
+
+ol li:before {
+	content : counter(item) ". ";
+	counter-increment : item
+}
+
+dl {
+	margin-bottom : 1.7em
+}
+
+dl dt {
+	font-weight : 600
+}
+
+.container {
+	max-width : 48em;
+	padding : 3.4em;
+	margin-left : auto;
+	margin-right : auto;
+}
+
+img, video, audio {
+	display : block;
+	width : auto;
+	max-width : 100%
+}
+
+table {
+	border-collapse : collapse;
+	text-align : left;
+	width : 100%;
+	margin : 0 0 1.7em;
+	border : #d6d6d6 solid 0.1em
+}
+
+table caption, table th, table td {
+	vertical-align : top;
+	padding : 0.85em
+}
+
+table caption {
+	font-weight : 600;
+	font-size : 0.8em;
+	text-transform : uppercase
+}
+
+table th {
+	font-weight : 600
+}
+
+table thead tr {
+	background-color : #f6f6f6
+}
+
+table thead tr.no-wrap th {
+	white-space : nowrap;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	line-height : 2.55em
+}
+
+table tbody tr {
+	border-top : 0.1em solid #d6d6d6
+}
+
+table tbody tr th {
+	background-color : #f6f6f6;
+	font-weight : 600
+}
+
+table tbody tr.no-wrap td, table tbody tr.no-wrap th {
+	white-space : nowrap;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	line-height : 2.55em
+}
+
+table tfoot {
+	color : #6c6c6c
+}
+
+table tfoot tr {
+	border-top : 0.1em solid #d6d6d6
+}
+
+table.fixed {
+	table-layout : fixed;
+	box-sizing : border-box
+}
+
+table.fixed * {
+	box-sizing : border-box
+}
+
+a {
+	color : #5694bd;
+	text-decoration : none;
+	transition : background-color 0.5s ease, color 0.5s ease
+}
+
+a:hover {
+	color : #5694bd
+}
+
+a:active {
+	color : #5694bd
+}
+
+main a {
+	color : #5694bd
+}
+
+main a:hover {
+	color : #386d8f
+}
+
+main a:active {
+	color : #29516a
+}
+
+footer a {
+	color : #5694bd
+}
+
+footer a:hover {
+	color : #386d8f
+}
+
+footer a:active {
+	color : #29516a
+}
+
+a.button:hover, a.button:active, a.button:visited {
+	color : white
+}
+
+.button, button, input[type="submit"], input[type="button"] {
+	box-sizing : border-box;
+	border-radius : 0.15em;
+	position : relative;
+	display : inline-block;
+	line-height : 1.7em;
+	font-size : 100%;
+	text-align : center;
+	outline : 0;
+	padding : 0.425em 0.85em;
+	border : none;
+	padding : 0.34em 0.85em;
+	margin : 0;
+	height : auto;
+	line-height : 1.7em;
+	font-family : 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+	font-weight : 600;
+	text-decoration : none;
+	color : white;
+	background-color : #4a4a4a;
+	border-color : #393939
+}
+
+.button:visited, button:visited, input[type="submit"]:visited, input[type="button"]:visited {
+	color : inherit
+}
+
+.button:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+	text-decoration : none;
+	cursor : pointer;
+	color : white;
+	background-color : #4a4a4a;
+	border-color : #393939
+}
+
+.button.active, .button:active, button.active, button:active, input[type="submit"].active, input[type="submit"]:active, input[type="button"].active, input[type="button"]:active {
+	color : white;
+	background-color : #4a4a4a;
+	border-color : #393939
+}
+
+.button[disabled="disabled"], .button[disabled="disabled"]:hover, .button[disabled="disabled"]:active, button[disabled="disabled"], button[disabled="disabled"]:hover, button[disabled="disabled"]:active, input[type="submit"][disabled="disabled"], input[type="submit"][disabled="disabled"]:hover, input[type="submit"][disabled="disabled"]:active, input[type="button"][disabled="disabled"], input[type="button"][disabled="disabled"]:hover, input[type="button"][disabled="disabled"]:active {
+	opacity : 0.5;
+	cursor : default
+}
+
+.button.icon-only, button.icon-only, input[type="submit"].icon-only, input[type="button"].icon-only {
+	width : 1.7em;
+	height : 1.7em;
+	padding : 0
+}
+
+.button.active, button.active, input[type="submit"].active, input[type="button"].active {
+	background : #171717
+}
+
+input[type="submit"], button[type="submit"], .button.submit {
+	background : #5694bd
+}
+
+input[type="submit"]:hover, button[type="submit"]:hover, .button.submit:hover {
+	background-color : #468ab3
+}
+
+.outline-button, a.outline-button {
+	background-color : transparent;
+	color : #5694bd;
+	border : #5694bd solid thin
+}
+
+.outline-button:hover, .outline-button:active, .outline-button:visited, a.outline-button:hover, a.outline-button:active, a.outline-button:visited {
+	background-color : transparent;
+	color : #5694bd
+}
+
+.buttons {
+	border : 0
+}
+
+.buttons .button, .buttons button, .buttons input[type="submit"], .buttons input[type="button"] {
+	float : left;
+	margin : 0;
+	border-radius : 0;
+	border-left : thin solid rgba(0, 0, 0, 0.25)
+}
+
+.buttons .button:focus, .buttons button:focus, .buttons input[type="submit"]:focus, .buttons input[type="button"]:focus {
+	outline : 0
+}
+
+.buttons .button:first-child, .buttons button:first-child, .buttons input[type="submit"]:first-child, .buttons input[type="button"]:first-child {
+	border-left-width : 0;
+	border-radius : 0.15em 0 0 0.15em
+}
+
+.buttons .button.active, .buttons button.active, .buttons input[type="submit"].active, .buttons input[type="button"].active {
+	background : #171717
+}
+
+.buttons .button:last-child, .buttons .button.last-child, .buttons button:last-child, .buttons button.last-child, .buttons input[type="submit"]:last-child, .buttons input[type="submit"].last-child, .buttons input[type="button"]:last-child, .buttons input[type="button"].last-child {
+	border-radius : 0 0.15em 0.15em 0
+}
+
+input[type="checkbox"], input[type="radio"] {
+	cursor : pointer;
+	margin : 0;
+	outline : 0;
+	border : none;
+	display : inline-block;
+	vertical-align : baseline;
+	margin-right : 0.425em;
+	width : 1em;
+	height : 1em;
+	margin-top : 0.35em;
+	text-align : center;
+	font-size : inherit;
+	background : transparent;
+	background-size : contain;
+	background-repeat : no-repeat;
+	background-position : center center
+}
+
+input[type="checkbox"] {
+	background-image : url("data:image/svg+xml;utf8, <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><path fill=\"#171717\" d=\"M28 4v24h-24v-24h24M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3v0z\" /></svg>")
+}
+
+input[type="checkbox"]:checked {
+	background-image : url("data:image/svg+xml;utf8, <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><path fill=\"#91ce3b\" d=\"M24 7l-11 10-4-5-3 3 7 9 13-15zM28 4v24h-24v-24h24M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3v0z\" /></svg>")
+}
+
+input[type="checkbox"]:checked + label {
+	color : #91ce3b
+}
+
+input[type="radio"] {
+	background-image : url("data:image/svg+xml;utf8, <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><path fill=\"#171717\" d=\"M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 28c-6.627 0-12-5.373-12-12s5.373-12 12-12c6.627 0 12 5.373 12 12 0 6.627-5.373 12-12 12z\" /></svg>")
+}
+
+input[type="radio"]:checked {
+	background-image : url("data:image/svg+xml;utf8, <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"><path fill=\"#91ce3b\" d=\"M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 28c-6.627 0-12-5.373-12-12s5.373-12 12-12c6.627 0 12 5.373 12 12 0 6.627-5.373 12-12 12zM10 16c0-3.314 2.686-6 6-6s6 2.686 6 6c0 3.314-2.686 6-6 6-3.314 0-6-2.686-6-6z\" /></svg>")
+}
+
+input[type="radio"]:checked + label {
+	color : #91ce3b
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+	display : inline-block;
+	vertical-align : top;
+	margin-bottom : 1.7em;
+	margin-right : 3.4em;
+	transition : all 0.5s ease
+}
+
+.checkbox-list li, .radio-list li {
+	position : relative;
+	padding-left : 2.55em
+}
+
+.checkbox-list li input[type="checkbox"], .checkbox-list li input[type="radio"], .radio-list li input[type="checkbox"], .radio-list li input[type="radio"] {
+	position : absolute;
+	left : 0;
+	top : 0
+}
+
+main ul.radio-list li, main ul.checkbox-list li {
+	padding-left : 1.7em
+}
+
+main ul.radio-list li:before, main ul.checkbox-list li:before {
+	content : ''
+}
+
+select {
+	box-sizing : border-box;
+	border-radius : 0.15em;
+	position : relative;
+	display : block;
+	line-height : 1.7em;
+	font-size : 100%;
+	text-align : center;
+	outline : 0;
+	padding : 0.425em 0.85em;
+	margin-top : -2px;
+	border-width : 1px;
+	border-style : solid;
+	text-align : left;
+	padding : 0.28333em 0.425em;
+	padding-right : 1.7em;
+	width : 100%;
+	margin-bottom : 1.7em;
+	margin-top : 0;
+	font-size : 100%;
+	font-family : 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+	font-weight : normal;
+	color : #171717;
+	background-color : #f6f6f6;
+	border-color : #d6d6d6;
+	background-repeat : no-repeat;
+	background-position : right 0.425em center;
+	background-size : 0.85em;
+	background-image : url("data:image/svg+xml;utf8, <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"32\" 	height=\"32\" viewBox=\"0 0 32 32\"><path fill=\"#171717\" d=\"M8 12l8 8 8-8z\" /></svg>");
+	transition : all 0.5s ease
+}
+
+select:visited {
+	color : inherit
+}
+
+select:hover {
+	text-decoration : none;
+	cursor : pointer;
+	color : white;
+	background-color : #4a4a4a;
+	border-color : #393939
+}
+
+select.active, select:active {
+	color : white;
+	background-color : #4a4a4a;
+	border-color : #393939
+}
+
+select[disabled="disabled"], select[disabled="disabled"]:hover, select[disabled="disabled"]:active {
+	opacity : 0.5;
+	cursor : default
+}
+
+select.icon-only {
+	width : 1.7em;
+	height : 1.7em;
+	padding : 0;
+}
+
+select:hover {
+	color : #5694bd;
+	background-color : #d6e6ef;
+	border-color : #5694bd
+}
+
+select:focus {
+	color : #91ce3b;
+	background-color : #e2f2ca;
+	border-color : #91ce3b
+}
+
+select[multiple] {
+	background-image : none
+}
+
+input[type="text"], input[type="search"], input[type="tel"], input[type="email"], input[type="password"], input[type="url"], input[type="date"], input[type="datetime"], input[type="time"], input[type="number"], input[list], textarea {
+	box-sizing : border-box;
+	border-radius : 0.15em;
+	position : relative;
+	display : block;
+	line-height : 1.7em;
+	font-size : 100%;
+	text-align : center;
+	outline : 0;
+	padding : 0.425em 0.85em;
+	margin-top : -2px;
+	border-width : 1px;
+	border-style : solid;
+	padding : 0.28333em 0.425em;
+	text-align : left;
+	width : 100%;
+	margin-bottom : 1.7em;
+	margin-top : 0;
+	font-family : 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+	font-size : 1em;
+	font-weight : normal;
+	color : #171717;
+	background-color : white;
+	border-color : #d6d6d6
+}
+
+input[type="text"]:visited, input[type="search"]:visited, input[type="tel"]:visited, input[type="email"]:visited, input[type="password"]:visited, input[type="url"]:visited, input[type="date"]:visited, input[type="datetime"]:visited, input[type="time"]:visited, input[type="number"]:visited, input[list]:visited, textarea:visited {
+	color : inherit;
+}
+
+input[type="text"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="email"]:hover, input[type="password"]:hover, input[type="url"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="time"]:hover, input[type="number"]:hover, input[list]:hover, textarea:hover {
+	text-decoration : none;
+	cursor : pointer;
+	color : white;
+	background-color : #4a4a4a;
+	border-color : #393939
+}
+
+input[type="text"].active, input[type="text"]:active, input[type="search"].active, input[type="search"]:active, input[type="tel"].active, input[type="tel"]:active, input[type="email"].active, input[type="email"]:active, input[type="password"].active, input[type="password"]:active, input[type="url"].active, input[type="url"]:active, input[type="date"].active, input[type="date"]:active, input[type="datetime"].active, input[type="datetime"]:active, input[type="time"].active, input[type="time"]:active, input[type="number"].active, input[type="number"]:active, input[list].active, input[list]:active, textarea.active, textarea:active {
+	color : white;
+	background-color : #4a4a4a;
+	border-color : #393939
+}
+
+input[type="text"][disabled="disabled"], input[type="text"][disabled="disabled"]:hover, input[type="text"][disabled="disabled"]:active, input[type="search"][disabled="disabled"], input[type="search"][disabled="disabled"]:hover, input[type="search"][disabled="disabled"]:active, input[type="tel"][disabled="disabled"], input[type="tel"][disabled="disabled"]:hover, input[type="tel"][disabled="disabled"]:active, input[type="email"][disabled="disabled"], input[type="email"][disabled="disabled"]:hover, input[type="email"][disabled="disabled"]:active, input[type="password"][disabled="disabled"], input[type="password"][disabled="disabled"]:hover, input[type="password"][disabled="disabled"]:active, input[type="url"][disabled="disabled"], input[type="url"][disabled="disabled"]:hover, input[type="url"][disabled="disabled"]:active, input[type="date"][disabled="disabled"], input[type="date"][disabled="disabled"]:hover, input[type="date"][disabled="disabled"]:active, input[type="datetime"][disabled="disabled"], input[type="datetime"][disabled="disabled"]:hover, input[type="datetime"][disabled="disabled"]:active, input[type="time"][disabled="disabled"], input[type="time"][disabled="disabled"]:hover, input[type="time"][disabled="disabled"]:active, input[type="number"][disabled="disabled"], input[type="number"][disabled="disabled"]:hover, input[type="number"][disabled="disabled"]:active, input[list][disabled="disabled"], input[list][disabled="disabled"]:hover, input[list][disabled="disabled"]:active, textarea[disabled="disabled"], textarea[disabled="disabled"]:hover, textarea[disabled="disabled"]:active {
+	opacity : 0.5;
+	cursor : default
+}
+
+input[type="text"].icon-only, input[type="search"].icon-only, input[type="tel"].icon-only, input[type="email"].icon-only, input[type="password"].icon-only, input[type="url"].icon-only, input[type="date"].icon-only, input[type="datetime"].icon-only, input[type="time"].icon-only, input[type="number"].icon-only, input[list].icon-only, textarea.icon-only {
+	width : 1.7em;
+	height : 1.7em;
+	padding : 0
+}
+
+input[type="text"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="url"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="time"]:focus, input[type="number"]:focus, input[list]:focus, textarea:focus {
+	color : #171717;
+	background-color : white;
+	border-color : #91ce3b
+}
+
+input[type="text"]:focus:hover, input[type="search"]:focus:hover, input[type="tel"]:focus:hover, input[type="email"]:focus:hover, input[type="password"]:focus:hover, input[type="url"]:focus:hover, input[type="date"]:focus:hover, input[type="datetime"]:focus:hover, input[type="time"]:focus:hover, input[type="number"]:focus:hover, input[list]:focus:hover, textarea:focus:hover {
+	color : #171717;
+	background-color : white;
+	border-color : #91ce3b
+}
+
+input[type="text"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="email"]:hover, input[type="password"]:hover, input[type="url"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="time"]:hover, input[type="number"]:hover, input[list]:hover, textarea:hover {
+	color : #5694bd;
+	background-color : #d6e6ef;
+	border-color : #5694bd
+}
+
+textarea {
+	min-height : 9em;
+	resize : vertical
+}
+
+::-webkit-input-placeholder {
+	font-weight : normal;
+	font-family : 'Source Sans Pro', 'Helvetica Neue', sans-serif
+}
+
+:-moz-placeholder {
+	font-weight : normal;
+	font-family : 'Source Sans Pro', 'Helvetica Neue', sans-serif
+}
+
+::-moz-placeholder {
+	font-weight : normal;
+	font-family : 'Source Sans Pro', 'Helvetica Neue', sans-serif
+}
+
+:-ms-input-placeholder {
+	font-weight : normal;
+	font-family : 'Source Sans Pro', 'Helvetica Neue', sans-serif
+}
+
+
+
+
+
+/* redefine some of Terrain's styles here, so they better fit our application */
+table {
+	border : #CCC solid 0.1em
+}
+
+table th, table td {
+	padding : 0.35em
+}
+
+table thead th {
+	line-height : 1.4em;
+	border-style : inset;
+	border : #CCC solid 0.1em
+}
+
+table tbody td {
+	line-height : 1.4em;
+	border-style : inset;
+	border : #CCC solid 0.1em
+}
+
+select {
+	padding-right : 0.3em;
+}
+
+select:focus {
+    color : #000;
+    background-color : #FFF;
+    border-color : #91CE3B
+}
+
+
+
+/* locally-defined styles begin here */
+
+section#header {
+	width : 100%;
+	height : 55px;
+	background : #BBD9EE;
+	padding-bottom : 1px;
+	border-bottom : 1px solid #DB5146
+}
+
+div#header-logo-col {
+	padding-top : 5px;
+	padding-left : 5px;
+	float : left;
+	width : 300px
+}
+
+div#header-nav-col {
+	float : right;
+	padding-right : 2px;
+	padding-top : 20px;
+	vertical-align : bottom
+}
+
+ul#nav {
+	float : right;
+	list-style-type : none;
+	margin : 0;
+	padding : 0
+}
+
+ul#nav li {
+	float : left;
+	list-style-type : none;
+	padding : 0;
+	margin-left : 3px;
+	text-align : center;
+	font-weight : 600;
+	font-size : 70%
+}
+
+ul#nav a {
+	float : left;
+	width : 100px;
+	padding : 3px;
+	text-decoration : none
+}
+
+ul#nav .unselected-item {
+	background : #517C8F;
+	color : #C1DCF0;
+	border : #416C7F solid 1px
+}
+
+ul#nav .selected-item {
+	background : #416C7F;
+	color : #DDD0A9;
+	border : #618C9F solid 1px
+}
+
+ul#nav a:hover {
+	background : #AB2116;
+	border : #DB5146 groove 1px;
+	color : #FFF5E2
+}
+
+section#content {
+	display : table;
+	width : 100%;
+	overflow : hidden;
+	position : relative;
+	padding-top : 10px
+}
+
+div#left-col {
+	display : table-cell;
+	float : left;
+	padding-left : 3px;
+	width : 300px
+}
+
+div#main-col {
+	padding-left : 7px;
+	padding-right : 3px;
+	margin-left : 300px
+}
+
+div#single-col {
+	padding-left : 7px;
+	padding-right : 7px
+}
+
+.tile {
+	padding-bottom : 10px
+}
+
+/* TODO: Need to experiment with padding/size/margins of h1, h2, etc within kbcontent */
+#kbcontent {
+	margin-left : 10px
+}
+
+.tile-heading {
+	padding-bottom : 3px;
+	padding-left : 2px;
+	color : #33596b;
+	font-size : 1.25em;
+	font-weight : bold
+}
+
+.tile-sub-heading {
+	padding-left : 2px;
+	color : #517C8F;
+	font-size : 0.8em;
+	color : #33596b;
+	font-weight : 600
+}
+
+#find-customer-form .row-name {
+	float : left;
+	font-size : 75%;
+	font-weight : bold;
+	width : 90px;
+	color : #517C8F;
+	padding-left : 7px
+}
+
+
+#find-customer-form .row-value {
+	height : 30px;
+	float : left;
+	width : 190px;
+	font-size : 75%
+}
+
+#find-customer-form .search-button {
+	padding-top : 0;
+	padding-bottom : 0;
+	padding-left : 200px
+}
+
+#top-requested-articles {
+	width : 100%;
+	line-height : 1.2em;
+	padding-bottom : 20px
+}
+
+#top-requested-articles .row-name {
+	float : left;
+	width : 150px;
+	font-size : 75%;
+	font-weight : bold;
+	color : #517C8F;
+	padding-left : 7px
+}
+
+#top-requested-articles .row-value {
+	float : left;
+	font-size : 75%;
+	padding-right : 28px
+}
+
+#top-requested-articles .search-button {
+	padding-bottom : 1px
+}
+
+#top-requested-articles .search-button #kb-main-search-button {
+	padding-left : 7px
+}
+
+input.submit-button {
+	width : 85px;
+	font-size : 75%;
+	font-weight : bold
+}
+
+div#tables-side-by-side {
+	padding-top : 5px;
+	width : 100%;
+	overflow : hidden;
+	position : relative
+}
+
+div#left-table {
+	float : left;
+	width : 280px
+}
+
+div#right-table {
+	float : left;
+	padding-left : 15px
+}
+
+
+#find-customer-form-adv input {
+	padding-right: 0px;
+	width : 95%;
+}
+
+#find-customer-form-adv .row-name {
+    font-size : 75%;
+    font-weight : bold;
+    color : #517C8F;
+	width : 95px
+}
+
+#find-customer-form-adv .row-value {
+	display: table-cell;
+    font-size : 75%
+}
+
+#account-details .row-name {
+    float : left;
+    font-size : 75%;
+    font-weight : bold;
+    width : 90px;
+    color : #517C8F;
+    padding-left : 7px
+}
+
+#account-details .row-value {
+    height : 30px;
+    float : left;
+    width : 190px;
+    font-size : 75%
+}
+
+#account-chat-search {
+    width : 100%;
+    line-height : 1.2em;
+    padding-bottom : 20px
+}
+
+#account-chat-search .row-name {
+    float : left;
+    width : 170px;
+    font-size : 75%;
+    font-weight : bold;
+    color : #517C8F;
+    padding-left : 7px
+}
+
+#account-chat-search .row-value {
+    float : left;
+    font-size : 75%;
+    width : 240px;
+    padding-right : 28px
+}
+
+#account-chat-search .search-button {
+    padding-bottom : 1px
+}
+
+#account-chat-search .search-button #chat-search-button {
+    padding-left : 7px
+}
+
+#agent-facet {
+    padding-left : 7px;
+	font-size: 75%
+}
+
+#category-facet {
+    padding-left : 8px;
+	font-size: 75%
+}
+
+#chat-detail-table .row-name {
+    float : left;
+	clear: left;
+    font-size : 80%;
+    font-weight : bold;
+    color : #517C8F;
+    padding-left : 12px;
+    width : 140px
+}
+
+#chat-detail-table .row-value {
+    width : auto;
+    font-size : 80%
+}
+
+table#account-summary {
+    font-size : 80%
+}
+
+table#status-info {
+    font-size : 80%
+}
+
+table#recent-calls-from {
+    font-size : 80%
+}
+
+table#recent-calls-to {
+    font-size : 80%
+}
+
+table#most-helpful-articles {
+    font-size : 80%
+}
+
+td.timestamp {
+    white-space: nowrap
+}
+
+#kb-content {
+	border: 1px solid #DDD
+}
+
+#kb-content h1 {
+    font-size : 125%;
+    font-weight : bold;
+    color : #517C8F;
+    padding-top : 10px;
+    padding-bottom : 10px;
+	margin-top : 1.3em;
+	margin-bottom : 1.1em;
+	line-height : 1.1em
+}
+
+#kb-content h2 {
+    font-size : 90%;
+    font-weight : 400;
+    padding-left : 15px;
+    padding-top : 3px;
+    padding-bottom : 1px;
+	margin-top : 0.7em;
+	margin-bottom : 0.7em;
+	line-height : 1.0em
+}
+
+#kb-content h3 {
+    font-size : 110%;
+    font-weight : 600;
+    padding-left : 15px;
+    padding-top : 5px;
+    padding-bottom : 3px;
+	margin-top : 1.2em;
+	margin-bottom : 1.1em;
+	line-height : 1.1em
+}
+
+#kb-content h4 {
+    border: 1px solid #ccc;
+    background: #eee;
+    font-weight : 600;
+    padding-left : 10px;
+    padding-top : 9px;
+    padding-bottom : 9px;
+	margin-top : 1.2em;
+	margin-bottom : 1.1em;
+	line-height : 1.1em
+}
+
+#kb-content p {
+    padding-left : 25px
+}
+
+#kb-content ol, ul {
+	list-style : none;
+	counter-reset : item;
+    margin-left : 5px;
+    padding-left : 25px
+}

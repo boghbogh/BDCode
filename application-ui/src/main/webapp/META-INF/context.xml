@@ -1,0 +1,12 @@
+<Context>
+    <Resource name="jdbc/impala" 
+        auth="Container" 
+        type="javax.sql.DataSource"
+        maxActive="50" 
+        maxIdle="30" 
+        maxWait="10000"
+        username="training" 
+        password="training" 
+        driverClassName="org.apache.hive.jdbc.HiveDriver"
+        url="jdbc:hive2://dev.loudacre.com:21050/;auth=noSasl"/>
+</Context>

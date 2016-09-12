@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.loudacre</groupId>
+  <artifactId>flume-interceptor-bonus</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>Flume Interceptor Bonus Exercise</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <flume.version>1.5.0-cdh5.4.5</flume.version>
+    <junit.version>4.10</junit.version>
+
+    <maven.eclipse.version>2.9</maven.eclipse.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <artifactId>flume-ng-core</artifactId>
+      <groupId>org.apache.flume</groupId>
+      <version>${flume.version}</version>
+    </dependency>
+    <dependency>
+      <artifactId>flume-hdfs-sink</artifactId>
+      <groupId>org.apache.flume.flume-ng-sinks</groupId>
+      <version>${flume.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>${maven.eclipse.version}</version>
+        <configuration>
+          <downloadSources>false</downloadSources>
+          <downloadJavadocs>false</downloadJavadocs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

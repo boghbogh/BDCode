@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "name": "Activation",
+  "namespace": "com.loudacre.data",
+  "doc": "An Activation of a user device",
+  "fields": [
+    // TODO: Start here and fill in the fields
+  ]
+}
